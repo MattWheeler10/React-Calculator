@@ -6,7 +6,8 @@ const button = (props) => {
     if (typeof props !== 'undefined' && typeof props.type !== 'undefined')
       classes.push('btn--' + props.type);
     return (
-      <button className={classes.join(' ')}>
+      <button className={classes.join(' ')} onClick=
+      {props.onButtonPress}>
         {props.children}
       </button>
     );

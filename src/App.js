@@ -1,12 +1,9 @@
 import React from 'react';
 import './App.css';
-import Keypad from "./components/keyPad"
+import Calculator from "./components/Calculator";
 
-function App() {
-  return (
-    <div>
-      <Keypad/>
-    </div>
-  );
-}
-export default App;
+const app = () => <div className="app">
+  <Calculator/>
+</div>;
+
+export default app;

@@ -1,22 +1,145 @@
-.App {
-  text-align: center;
+::after
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
+html {
+    font-size: 62.5%;
+    font-family: 'Open Sans', sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+body {
+    font-family: inherit;
 }
 
-.App-link {
-  color: #09d3ac;
+/* Variables */
+:root {
+    --color-white: #fff;
+    --color-light-white: #eee;
+
+    --color-blue:rgba(41, 162, 189, 0.9);
+    --color-blue-transparent: rgba(24, 44, 88, 0.9);
+    --color-lightblue-transparent: rgba(14, 169, 216, 0.9);
+
+    --color-light-blue: rgba(14, 169, 216, 0.9);
+  
+    --color-darkblue: rgba(24, 44, 88, 0.9);
+
+    --color-light-black: #222;
+    --color-black: #000;
+
+    --shadow: rgba(0, 0, 0, .4);
+}
+
+/* Layout */
+.app {
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to bottom right, var(--color-lightblue-transparent), var(--color-blue-transparent)), url(https://wallpaperplay.com/walls/full/3/4/4/31887.jpg);
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Calculator */
+.calculator {
+    height: 80vh;
+    width: 35%;
+    box-shadow: 0 2rem 4rem var(--shadow);
+    background-color: var(--color-white);
+}
+
+/* Screen */
+.screen {
+    height: 25vh;
+    width: 94.13%;
+    padding: 0 2rem;
+
+    color: var(--color-light-white);
+    background-color: var(--color-blue);
+}
+
+.computation-screen {
+    height: 6vh;
+    font-size: 2.5rem;
+    overflow: hidden;
+    white-space: nowrap;
+    
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.result-screen {
+    height: 19vh;
+    font-size: 8rem;
+    font-weight: 600;
+    overflow: hidden;
+    white-space: nowrap;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+/* Keypad */
+.keypad {
+    height: 55vh;
+    width: 100%;
+}
+
+.keypad__row {
+    height: 11vh;
+    width: 100%;
+    display: flex;
+    color: white;
+}
+
+/* Button */
+.btn {
+    width: 25%;
+    height: 100%;
+    font-size: 3rem;
+    font-family: inherit;
+    background-color: var(--color-white);
+    border: 1px solid transparent;
+    outline: none;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    transition: all .2s;
+}
+
+.btn:hover {
+    color: var(--color-light-white);
+    background-color: var(--color-blue);
+}
+
+.btn:active {
+    transform: scale(.95);
+}
+
+.btn--large {
+    width: 75%;
+    color: var(--color-darkblue);
+    background-color: var(--color-light-white);
+}
+
+.btn--large:hover {
+    background-color: var(--color-blue);
+    color: var(--color-light-white);
+}
+
+.btn--primary {
+    color: var(--color-blue);
+}
+
+.btn--operator {
+    color: var(--color-darkblue);
 }
