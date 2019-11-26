@@ -22,8 +22,6 @@ body {
     --color-blue:rgba(41, 162, 189, 0.9);
     --color-blue-transparent: rgba(24, 44, 88, 0.9);
     --color-lightblue-transparent: rgba(14, 169, 216, 0.9);
-
-    --color-light-blue: rgba(14, 169, 216, 0.9);
   
     --color-darkblue: rgba(24, 44, 88, 0.9);
 
@@ -31,7 +29,7 @@ body {
     --color-black: #000;
 
     --shadow: rgba(0, 0, 0, .4);
-}
+} 
 
 /* Layout */
 .app {
@@ -56,9 +54,8 @@ body {
 /* Screen */
 .screen {
     height: 25vh;
-    width: 94.13%;
+    width: auto;
     padding: 0 2rem;
-
     color: var(--color-light-white);
     background-color: var(--color-blue);
 }
@@ -118,7 +115,7 @@ body {
 
 .btn:hover {
     color: var(--color-light-white);
-    background-color: var(--color-blue);
+    background-color: var(--color-darkblue);
 }
 
 .btn:active {
@@ -128,11 +125,12 @@ body {
 .btn--large {
     width: 75%;
     color: var(--color-darkblue);
-    background-color: var(--color-light-white);
+    background-color: var(--color-white);
+    color:var(--color-darkblue);
 }
 
 .btn--large:hover {
-    background-color: var(--color-blue);
+    background-color: var(--color-darkblue);
     color: var(--color-light-white);
 }
 
@@ -142,4 +140,10 @@ body {
 
 .btn--operator {
     color: var(--color-darkblue);
+}
+.btn--largeClear {
+  width: 37.5%;
+  color: var(--color-darkblue);
+  background-color: var(--color-light-white);
+  color:var(--color-darkblue);
 }

@@ -2,7 +2,6 @@ import React from 'react';
 import Screen from './Screen';
 import Keypad from './keyPad';
 
-
 class Calculator extends React.Component {
   state = {
     equation: '',
@@ -12,6 +11,7 @@ class Calculator extends React.Component {
     let equation = this.state.equation;
     const pressedButton = event.target.innerHTML;
     if (pressedButton === 'C') return this.clear();
+    else if (pressedButton === "CA") return this.clear();
     else if ((pressedButton >= '0' && pressedButton <= '9') || pressedButton === '.') equation += pressedButton;
     else if (['+', '-', '*', '/', '%'].indexOf(pressedButton) !== -1) equation += ' ' + pressedButton + ' ';
     else if (pressedButton === '=') {
