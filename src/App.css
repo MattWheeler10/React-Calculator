@@ -122,7 +122,7 @@ body {
 }
 
 .btn--large {
-    width: 75%;
+    width: 50%;
     color: var(--color-darkblue);
     background-color: var(--color-white);
     color:var(--color-darkblue);
